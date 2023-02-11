@@ -12,14 +12,12 @@
 // = : 대입연산자. 오른쪽에있는 값을 왼쪽에 있는 변수에 대입하는 연산자.
 int number1 = 25; // int : 부호가 있는 4byte 정수형
 int number2 = 4;
-short snum; // short : 부호가 있는 2byte 정수형
-long num; // long : 부호가 있는 8byte 정수형
-
-float fnum = 4.2f; // float : 4byte 실수형
-double dnum = 4.2; // double : 8byte 실수형 
-
+uint number3 = 1;
+int number4 = -1;
+short s; // short : 부호가 있는 2byte 정수형
+long l; // long : 부호가 있는 8byte 정수형
+float f = 4.2f; // float : 4byte 실수형
+double d = 4.2; // double : 8byte 실수형 
 char c = 'k'; // char : 2 byte 문자형
-string s = "안녕하세요"; // string : 2byte * 문자갯수 + 1byte (null) 문자열형 (primitive type과 예외적임)
-
-bool isTrue = false; // bool : 1byte 논리형 
-
+string st = "안녕하세요"; // string : 2byte * 문자갯수 + 1byte (null) 문자열형 (primitive type과 예외적임)
+bool isTrue = false; // bool : 1byte 논리형
