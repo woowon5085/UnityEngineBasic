@@ -6,7 +6,9 @@ using System.Collections.Generic;
 // 탐색, 삽입, 삭제 알고리즘
 // 현재 자료 갯수
 
-#region 동적 배열 
+
+#region Dynamic Array
+/*
 MyDynamicArray myDynamicArray = new MyDynamicArray();
 myDynamicArray.Add(3);
 myDynamicArray.Add(1);
@@ -55,15 +57,16 @@ ArrayList arrayList = new ArrayList();
 arrayList.Add(3);
 arrayList.Add('d');
 arrayList.Add("안녕");
-
+*/
 
 #endregion
 
 
-# region Generic 동적배열
+# region Generic Dynamic Array
 //내가만든 Generic 동적배열
 //----------------------------------------------------------------------------------------------
 
+/*
 MyDynamicArray<double> doubleArray = new MyDynamicArray<double>();
 doubleArray.Add(3.0);
 doubleArray.Add(5.0);
@@ -98,5 +101,66 @@ List<double> doubleList = new List<double>();
 doubleList.Add(2.1);
 doubleList.RemoveAt(0);
 doubleList.FindIndex(x => x == 3.0); // Lamda
+*/
+#endregion
 
+
+#region Genenric Linkedlist
+// 내가만든 Generic LinkedList
+//-----------------------------------------------------------------------------------------
+
+/*
+MyLinkedList<int> intLinkedList = new MyLinkedList<int>();
+intLinkedList.AddLast(2);
+intLinkedList.AddLast(3);
+intLinkedList.AddFirst(5);
+MyLinkedListNode<int> dummy = intLinkedList.FindLst(5);
+intLinkedList.AddAfter(dummy, 6);
+
+foreach (int value in intLinkedList)
+{
+    Console.WriteLine($"내 연결리스트 순회중...{value}");
+}
+
+// C# System.Collections.Generic.LinkedList
+//-----------------------------------------------------------------------------------------
+LinkedList<float> floatLinkedList = new LinkedList<float>();
+floatLinkedList.AddFirst(3);
+LinkedList<float>?dummy2 = floatLinkedList.FindLast(3);
+floatLinkedList.AddAfter(dummy2, 5);
+
+*/
+
+#endregion
+
+#region Generic Ditionary
+//내가 만든 Generic Dictionary
+//-----------------------------------------------------------------------------------------
+MyDictionary<string, int> scores = new MyDictionary<string, int>();
+scores.Add("철수", 80);
+scores.Add("영희", 80);
+scores.Remove("영희");
+Console.WriteLine(scores["철수"]);
+
+//C# System.Collections.Generic.Dictionary
+//-----------------------------------------------------------------------------------------
+Dictionary<string, char> grades = new Dictionary<string, char>();
+scores.Add("철수", 'A');
+scores.Add("영희", 'C');
+scores.Remove("영희");
+
+foreach(KeyValuePair<string, char> grade in grades)
+{
+    Console.WriteLine($"{grade.Key}의 등급 : {grade.Value}");
+}
+
+foreach(var key in grades.Keys)
+{
+    Console.WriteLine($"학급생{key}");
+}
+
+foreach (char value in grades.Values)
+{
+    Console.WriteLine($"등급표{value}");
+}
 #endregion
