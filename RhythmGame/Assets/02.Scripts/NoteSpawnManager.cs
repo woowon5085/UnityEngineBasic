@@ -64,6 +64,7 @@ namespace RhythmGame
 
         private void Awake()
         {
+            instance = this;
             _noteQueue = new Queue<NoteData>(SongDataLoader.songData.noteList.OrderBy(note 
                 => note.time));
         }
